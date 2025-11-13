@@ -1,0 +1,72 @@
+<section class="relative w-full py-20 bg-black text-center overflow-hidden">
+  <!-- Fondo de luces suaves -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-pink-950/10 to-black"></div>
+  <div class="absolute -top-20 left-10 w-72 h-72 bg-pink-600/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-10 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl"></div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 px-6">
+    <h2 class="text-4xl font-extrabold text-pink-400 drop-shadow-[0_0_15px_rgba(255,0,150,0.9)]">
+      💖 Mensajes del Corazón 💖
+    </h2>
+
+    <p id="mensaje" 
+       class="mt-10 text-2xl text-pink-300/90 font-medium max-w-3xl mx-auto leading-relaxed transition-all duration-700 drop-shadow-[0_0_12px_rgba(255,0,150,0.8)]">
+    </p>
+
+    <button id="nuevoMensaje" 
+      class="mt-10 px-6 py-3 bg-pink-500 text-black font-bold rounded-xl shadow-[0_0_20px_rgba(255,0,150,0.8)] hover:bg-pink-400 transition">
+      💌 Nuevo Mensaje
+    </button>
+  </div>
+
+  <style>
+    /* Animación de aparición */
+    .fade {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.6s ease;
+    }
+    .show {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+
+  <script type="text/javascript"  >
+    const mensajes = [
+      "Eres mi lugar favorito cuando el mundo se vuelve caótico 💫",
+      "Tu sonrisa tiene el poder de detener el tiempo 💖",
+      "Cada día contigo es mi capítulo favorito 📖",
+      "Amarte no fue una elección, fue el destino ✨",
+      "Tu voz es la melodía que calma mi alma 🎶",
+      "Contigo, incluso el silencio suena hermoso 🌙",
+      "Si pudiera elegir un lugar donde quedarme, sería entre tus brazos 💋",
+      "Tu amor es mi neón en la oscuridad 💞",
+      "Eres la chispa que enciende todos mis atardeceres 🌅",
+      "Mi mundo brilla más cuando te pienso 🌟"
+    ];
+
+    const mensajeEl = document.getElementById("mensaje");
+    const boton = document.getElementById("nuevoMensaje");
+
+    function mostrarMensaje() {
+      const aleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
+      mensajeEl.classList.remove("show");
+      mensajeEl.classList.add("fade");
+      setTimeout(() => {
+        mensajeEl.textContent = aleatorio;
+        mensajeEl.classList.remove("fade");
+        mensajeEl.classList.add("show");
+      }, 500);
+    }
+
+    boton.addEventListener("click", mostrarMensaje);
+
+    // Muestra uno al cargar
+    window.addEventListener("load", mostrarMensaje);
+
+    // Cambia automáticamente cada 8 segundos
+    setInterval(mostrarMensaje, 8000);
+  </script>
+</section>

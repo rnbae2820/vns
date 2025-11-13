@@ -1,11 +1,25 @@
 ---
+import Hero from '../components/home/Hero.jsx';
+import Message from '../components/home/Message.astro';
+import Universe from "../components/home/Universe.jsx";
+import SlideRomantic from '../components/home/SlideRomantic.jsx';
+import Frases from "../components/home/Frases.jsx"
+
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Story from '../components/home/Story';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title='Home'>
+	<br>
+	<Hero client:load/>
+	<Message/>
+	<!-- <Welcome /> -->
+	<Universe  client:load /> 
+	<Story client:visible/>
+	<!-- <SlideRomantic client:load />
+	<!-- <Frases client:load /> --> 
 </Layout>
