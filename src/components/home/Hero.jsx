@@ -244,7 +244,7 @@ export default function Hero() {
             className="relative"
           >
             <img 
-              src="./img/vane/01.jpg" 
+              src="/img/vane/01.jpg" 
               alt="moto romántica" 
               className="w-full h-full object-contain"
               style={{

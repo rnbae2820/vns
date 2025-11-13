@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Story = () => {
   // PON AQUÍ EL LINK DEL VIDEO DIRECTAMENTE - Archivo local
-  const videoUrl = "./videos/history/01.mp4"; // Cambia esta URL por la tuya
+  const videoUrl = "/videos/history/01.mp4"; // Cambia esta URL por la tuya
 
   const [hearts, setHearts] = useState([]);
   const [isPlaying, setIsPlaying] = useState(false);
