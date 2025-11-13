@@ -12,10 +12,10 @@ export default function Gallery() {
 
   // Beautiful romantic images
   const romanticImages = [
-    { id: 1, src: "img/gallery/01.jpg", title: "Vanesa", description: "El sol hoy amaneció más brillante, pero aún palidece comparado con el resplandor que siento cuando pienso en ti." },
-    { id: 2, src: "img/gallery/02.jpg", title: "Vanesa", description: "El sol hoy amaneció más brillante, pero aún palidece comparado con el resplandor que siento cuando pienso en ti." },
-    { id: 3, src: "img/gallery/03.jpg", title: "Vanesa", description: "No necesito fechas en el calendario para celebrarte, porque cada latido es una fiesta donde tú eres la invitada de honor." },
-    { id: 4, src: "img/gallery/04.jpg", title: "Vanesa", description: "En el diccionario de mi vida, 'felicidad' tiene tu rostro." },
+    { id: 1, src: "./img/gallery/01.jpg", title: "Vanesa", description: "El sol hoy amaneció más brillante, pero aún palidece comparado con el resplandor que siento cuando pienso en ti." },
+    { id: 2, src: "./img/gallery/02.jpg", title: "Vanesa", description: "El sol hoy amaneció más brillante, pero aún palidece comparado con el resplandor que siento cuando pienso en ti." },
+    { id: 3, src: "./img/gallery/03.jpg", title: "Vanesa", description: "No necesito fechas en el calendario para celebrarte, porque cada latido es una fiesta donde tú eres la invitada de honor." },
+    { id: 4, src: "./img/gallery/04.jpg", title: "Vanesa", description: "En el diccionario de mi vida, 'felicidad' tiene tu rostro." },
     // { id: 5, src: "img/history/01.png", title: "Vanesa", description: "El silencio cómodo de nuestras mañanas, donde cada sorbo es una caricia en forma de vapor." },
     // { id: 6, src: "https://placehold.co/600x600/magenta/8b5cf6?text=Promesas", title: "Promesas Hechas", description: "Tejiendo nuestro futuro con hilos de confianza, uno a uno, momento a momento." },
     // { id: 7, src: "https://placehold.co/600x600/deep-pink/f472b6?text=Caminatas", title: "Caminatas Sin Rumbo", description: "Descubriendo que el mejor destino siempre es tu mano en la mía." },
