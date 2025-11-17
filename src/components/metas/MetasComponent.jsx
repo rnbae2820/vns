@@ -12,7 +12,7 @@ export default function MetasComponent() {
   const romanticMoments = [
     {
       id: 1,
-      date: "02 Octubre, 2023",
+      date: "2023",
       title: "Fin del Colegio",
       description: "El último día de clases se convirtió en un recuerdo que brilla con luz propia. Cada examen, cada risa y cada esfuerzo se unieron para cerrar una etapa que la hizo más fuerte y más soñadora.",
       photo: "https://placehold.co/400x400/pink/f9a8d4?text=Colegio+Finalizado",
@@ -20,7 +20,7 @@ export default function MetasComponent() {
     },
     {
       id: 2,
-      date: "15 Marzo, 2024",
+      date: ", 2024",
       title: "Ingreso al Instituto",
       description: "Con un corazón lleno de ilusión y pasos firmes, comenzó un nuevo camino. No solo ingresó al instituto, abrió una puerta hacia todo lo que siempre soñó construir.",
       photo: "https://placehold.co/400x400/fuchsia/f0abfc?text=Instituto",
@@ -248,7 +248,7 @@ export default function MetasComponent() {
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-fuchsia-300 to-pink-300 drop-shadow-[0_0_30px_rgba(236,72,153,0.9)]"
             style={{ fontFamily: '"Playfair Display", serif', letterSpacing: '-0.025em' }}
           >
-            Nuestro Viaje de Amor
+             Viaje de Amor
           </motion.h1>
           
           <motion.div
@@ -264,7 +264,7 @@ export default function MetasComponent() {
                   onClick={() => setCurrentSection(section)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${currentSection === section ? 'bg-pink-500/30 text-pink-200 shadow-[0_0_15px_rgba(236,72,153,0.7)]' : 'bg-white/5 text-pink-300/70 hover:bg-white/10'}`}
                 >
-                  {section === 'timeline' && 'Nuestra Historia'}
+                  {section === 'timeline' && ' Historia'}
                   {section === 'completed' && 'Metas Cumplidas ✨'}
                   {section === 'pending' && 'Sueños por Cumplir 💫'}
                 </button>
@@ -278,7 +278,7 @@ export default function MetasComponent() {
               className="mt-6 text-xl text-pink-200/90 italic max-w-3xl mx-auto drop-shadow-[0_0_12px_rgba(236,72,153,0.6)]"
               style={{ fontFamily: '"Caveat", cursive', lineHeight: '1.7' }}
             >
-              "Cada momento contigo es un capítulo en la historia más hermosa que jamás imaginé escribir."
+              "Cada momento  es un capítulo en la historia más hermosa ."
             </motion.p>
           </motion.div>
         </motion.div>
@@ -414,7 +414,7 @@ export default function MetasComponent() {
                     className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-300 drop-shadow-[0_0_20px_rgba(255,215,0,0.8)]"
                     style={{ fontFamily: '"Playfair Display", serif' }}
                   >
-                    Nuestras Metas Cumplidas ✨
+                     Metas Cumplidas ✨
                   </motion.h2>
                   <Check className="w-8 h-8 text-yellow-300 drop-shadow-[0_0_15px_rgba(255,215,0,0.7)]" />
                 </div>
@@ -491,7 +491,7 @@ export default function MetasComponent() {
                     onClick={() => setShowAllGoals(true)}
                     className="px-6 py-3 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 text-yellow-300 rounded-full font-medium hover:bg-yellow-500/30 transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.3)]"
                   >
-                    Ver todas nuestras metas cumplidas
+                    Ver todas  metas cumplidas
                   </motion.button>
                 </div>
               )}

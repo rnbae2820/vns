@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 export default function Song() {
   // Extract video ID from YouTube URL
-  const youtubeVideoUrl = "https://youtu.be/zAZfpSWgoh4";
+  const youtubeVideoUrl = "https://youtu.be/4NOMFBRfaT0";
   const videoId = youtubeVideoUrl.split('v=')[1];
   const songLink = `https://www.youtube.com/watch?v=${videoId}`;
   

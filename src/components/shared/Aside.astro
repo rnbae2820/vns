@@ -1,25 +1,75 @@
-<!-- ASIDE FLOTANTE - ÍCONO DE MÚSICA NEÓN -->
-<aside class="fixed top-1/2 right-6 -translate-y-1/2 z-50">
+<!-- ASIDE FLOTANTE - ÍCONOS NEÓN -->
+<aside class="fixed top-1/2 right-6 -translate-y-1/2 z-50 flex flex-col gap-4">
   <style>
     :root {
       --neon-pink: #ff3aa0;
+      --neon-blue: #3a8bff;
     }
 
-    .neon-glow {
+    .neon-glow-pink {
       filter: drop-shadow(0 0 6px rgba(255,58,160,0.9))
               drop-shadow(0 0 12px rgba(255,58,160,0.55));
     }
+
+    .neon-glow-blue {
+      filter: drop-shadow(0 0 6px rgba(58,139,255,0.9))
+              drop-shadow(0 0 12px rgba(58,139,255,0.55));
+    }
   </style>
 
-  <!-- Enlace a /music -->
+<!-- Ícono de Cumpleaños (versión hermosa) -->
+<a href="/cumple"
+   class="w-16 h-16 flex items-center justify-center rounded-2xl bg-black/60 
+          border border-blue-400/40 shadow-[0_0_12px_rgba(0,180,255,0.4)]
+          hover:shadow-[0_0_25px_rgba(0,190,255,0.9)] hover:bg-black/80
+          transition-all cursor-pointer group relative backdrop-blur-sm">
+
+  <!-- SVG BRILLANTE -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       class="w-9 h-9 transition-transform group-hover:scale-110 neon-svg"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="1.7"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       style="color: #4ddaff;">
+       
+    <!-- Velita -->
+    <path d="M12 2c1.4 1.6-1.4 3.2 0 4.8c-1.4-1.6 1.4-3.2 0-4.8z" />
+    <path d="M12 7v3" />
+
+    <!-- Pastel -->
+    <path d="M4 14c0-2 1-3 3-3s3 1 5 1s3-1 5-1s3 1 3 3v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+    <path d="M4 14l16 0" />
+  </svg>
+
+  <!-- Aura brillante -->
+  <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none">
+    <div class="absolute inset-0 rounded-2xl bg-blue-500/20 blur-xl animate-pulse"></div>
+  </div>
+
+</a>
+
+<style>
+  /* Glow del SVG */
+  .neon-svg {
+    filter: drop-shadow(0 0 6px #33d4ff)
+            drop-shadow(0 0 12px #33d4ff);
+  }
+</style>
+
+
+  <!-- Ícono de Música (el original) -->
   <a href="/music"
      class="w-14 h-14 flex items-center justify-center rounded-full bg-black/60 
-            border border-pink-700/40 neon-glow hover:bg-black/80 
-            transition cursor-pointer">
+            border border-pink-700/40 neon-glow-pink hover:bg-black/80 
+            transition cursor-pointer group"
+     title="Nuestra Música">
 
     <!-- Ícono musical -->
     <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-8 h-8"
+         class="w-8 h-8 group-hover:scale-110 transition-transform"
          viewBox="0 0 24 24"
          fill="none"
          stroke="currentColor"
