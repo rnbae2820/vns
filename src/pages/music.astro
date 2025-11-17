@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Song from "../components/music/Song.jsx";
+---
+
+<Layout title="Music">
+    <main  class="flex justifi" >
+        <Song  client:load />
+    </main>
+  
+</Layout>

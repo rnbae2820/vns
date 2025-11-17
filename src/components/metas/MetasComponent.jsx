@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Check, Star, X } from "lucide-react";
 
-export default function Metas() {
+export default function MetasComponent() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentSection, setCurrentSection] = useState('timeline');
   const [showAllGoals, setShowAllGoals] = useState(false);
@@ -12,104 +12,101 @@ export default function Metas() {
   const romanticMoments = [
     {
       id: 1,
-      date: "14 Febrero, 2023",
-      title: "Nuestro Primer Beso",
-      description: "Bajo la luz de la luna llena, el tiempo se detuvo mientras nuestros labios se encontraban por primera vez. Fue como si el universo conspirara para que este momento fuera perfecto.",
-      photo: "https://placehold.co/400x400/pink/f9a8d4?text=Primer+Beso",
+      date: "02 Octubre, 2023",
+      title: "Fin del Colegio",
+      description: "El último día de clases se convirtió en un recuerdo que brilla con luz propia. Cada examen, cada risa y cada esfuerzo se unieron para cerrar una etapa que la hizo más fuerte y más soñadora.",
+      photo: "https://placehold.co/400x400/pink/f9a8d4?text=Colegio+Finalizado",
       color: "from-pink-400 to-purple-700"
     },
     {
       id: 2,
-      date: "21 Marzo, 2023",
-      title: "Primera Confesión",
-      description: "Con el corazón latiendo fuerte y las manos temblorosas, te dije esas tres palabras que cambiaron todo. Tus ojos brillaron más que todas las estrellas juntas.",
-      photo: "https://placehold.co/400x400/fuchsia/f0abfc?text=Te+Amo",
+      date: "15 Marzo, 2024",
+      title: "Ingreso al Instituto",
+      description: "Con un corazón lleno de ilusión y pasos firmes, comenzó un nuevo camino. No solo ingresó al instituto, abrió una puerta hacia todo lo que siempre soñó construir.",
+      photo: "https://placehold.co/400x400/fuchsia/f0abfc?text=Instituto",
       color: "from-rose-400 to-pink-600"
     },
-    {
-      id: 3,
-      date: "10 Abril, 2023",
-      title: "Nuestra Primera Aventura",
-      description: "Sin mapa ni rumbo, nos perdimos juntos en las calles de una ciudad desconocida. Descubrimos que el mejor plan es simplemente estar juntos.",
-      photo: "https://placehold.co/400x400/rose/fecdd6?text=Aventuras",
-      color: "from-purple-500 to-indigo-700"
-    },
-    {
-      id: 4,
-      date: "15 Mayo, 2023",
-      title: "Noche de Estrellas",
-      description: "Acostados en el césped, contamos constelaciones y promesas. El cielo fue testigo silencioso de nuestros sueños compartidos.",
-      photo: "https://placehold.co/400x400/pink/fda4af?text=Estrellas",
-      color: "from-fuchsia-500 to-pink-700"
-    },
-    {
-      id: 5,
-      date: "20 Junio, 2023",
-      title: "Promesa Eterna",
-      description: "En el atardecer más hermoso que he visto, prometimos que cada día sería una nueva página en nuestra historia de amor infinito.",
-      photo: "https://placehold.co/400x400/pale-pink/fde7f7?text=Promesas",
-      color: "from-pink-600 to-rose-700"
-    },
-    {
-      id: 6,
-      date: "Hoy y Siempre",
-      title: "Nuestro Por Siempre",
-      description: "Cada latido es un recordatorio de que el amor verdadero no tiene final. Eres mi hoy, mi mañana y mi eternidad.",
-      photo: "https://placehold.co/400x400/magenta/8b5cf6?text=Siempre",
-      color: "from-indigo-600 to-purple-800"
-    }
+  
+
+
+    // {
+    //   id: 1,
+    //   date: "14 Febrero, 2023",
+    //   title: "Nuestro Primer Beso",
+    //   description: "Bajo la luz de la luna llena, el tiempo se detuvo mientras nuestros labios se encontraban por primera vez. Fue como si el universo conspirara para que este momento fuera perfecto.",
+    //   photo: "https://placehold.co/400x400/pink/f9a8d4?text=Primer+Beso",
+    //   color: "from-pink-400 to-purple-700"
+    // },
+   
   ];
 
-  // Completed and pending goals
+  // metas completadas
   const completedGoals = [
     {
       id: 1,
-      title: "Nuestro Primer Viaje Juntos",
-      description: "Recorrimos las calles de París, donde cada rincón guardaba un nuevo descubrimiento y cada cafetería una conversación que duraba horas.",
-      date: "Julio 2023",
+      title: "Terminó el Colegio",
+     description: "El final del colegio no fue un adiós, sino la primera chispa de un sueño más grande. Como una flor que se abre hacia la luz, el corazón descubrió que cada meta cumplida es un puente hacia algo más hermoso. No importan los días difíciles ni los miedos escondidos: todo lo vivido se volvió fuerza, impulso y destino. Porque quien aprende a cerrar etapas con amor, está destinado a construir un futuro lleno de maravillas.",
+      date: "Diciembre 2024",
       color: "from-pink-400 to-purple-500"
     },
     {
       id: 2,
-      title: "Primera Cena en Casa",
-      description: "Entre risas y platos rotos, cocinamos juntos nuestra primera cena. El postre terminó en nuestros rostros, pero fue perfecto.",
-      date: "Abril 2023",
-      color: "from-rose-400 to-pink-500"
-    },
-    {
-      id: 3,
-      title: "Cita bajo las Estrellas",
-      description: "Encontramos un mirador secreto donde nadie más podía vernos, y hablamos de nuestros sueños hasta que el sol comenzó a asomar.",
-      date: "Mayo 2023",
-      color: "from-purple-400 to-indigo-500"
+      title: "Ingreso al Instituto",
+     description: "Ingresar al instituto fue como tocar un nuevo amanecer: un espacio donde nacen metas, donde los sueños dejan de ser palabras y comienzan a tomar forma. Entre libros, caminos y miradas nuevas, el corazón entendió que crecer también es un acto de valentía. Cada paso dado hacia ese futuro es una promesa silenciosa: la promesa de convertirse en todo aquello que alguna vez se imaginó bajo un cielo lleno de esperanza.",
+      date: "Marzo 2025",
+      color: "from-pink-400 to-purple-500"
     }
-  ];
 
+
+    // {
+    //   id: 1,
+    //   title: "Nuestro Primer Viaje Juntos",
+    //   description: "Recorrimos las calles de París, donde cada rincón guardaba un nuevo descubrimiento y cada cafetería una conversación que duraba horas.",
+    //   date: "Julio 2023",
+    //   color: "from-pink-400 to-purple-500"
+    // },
+    // {
+    //   id: 2,
+    //   title: "Primera Cena en Casa",
+    //   description: "Entre risas y platos rotos, cocinamos juntos nuestra primera cena. El postre terminó en nuestros rostros, pero fue perfecto.",
+    //   date: "Abril 2023",
+    //   color: "from-rose-400 to-pink-500"
+    // },
+    // {
+    //   id: 3,
+    //   title: "Cita bajo las Estrellas",
+    //   description: "Encontramos un mirador secreto donde nadie más podía vernos, y hablamos de nuestros sueños hasta que el sol comenzó a asomar.",
+    //   date: "Mayo 2023",
+    //   color: "from-purple-400 to-indigo-500"
+    // }
+  ];
+// metas pro cumplir
   const pendingGoals = [
+    
     {
       id: 1,
-      title: "Boda en la Playa",
-      description: "Imagino nuestros pies descalzos en la arena, el sonido de las olas como música de fondo, y el atardecer iluminando nuestros rostros mientras nos decimos 'sí'.",
+      title: "Terminar tus estudios superiores",
+      description: "Sueño con verte cumplir cada meta que te propones. Imagino el día en que sostienes tu título, radiante, demostrando al mundo la mujer increíble que eres. Tu esfuerzo, tu fuerza y tu luz merecen llegar muy lejos.",
       color: "from-pink-300 to-purple-400"
     },
-    {
-      id: 2,
-      title: "Nuestro Primer Hogar",
-      description: "Una casa llena de libros, fotos en las paredes, y el aroma de café por las mañanas. Un lugar donde cada rincón cuente nuestra historia.",
-      color: "from-fuchsia-300 to-pink-400"
-    },
-    {
-      id: 3,
-      title: "Viaje por el Mundo",
-      description: "Recorrer cada continente juntos, descubriendo culturas, probando comidas extrañas, y creando recuerdos que llenen miles de álbumes.",
-      color: "from-indigo-300 to-purple-400"
-    },
-    {
-      id: 4,
-      title: "Familia Propia",
-      description: "Crear una familia donde el amor sea el lenguaje principal, donde cada niño herede tu sonrisa y mi curiosidad por la vida.",
-      color: "from-rose-300 to-pink-400"
-    }
+    // {
+    //   id: 2,
+    //   title: "Nuestro Primer Hogar",
+    //   description: "Una casa llena de libros, fotos en las paredes, y el aroma de café por las mañanas. Un lugar donde cada rincón cuente nuestra historia.",
+    //   color: "from-fuchsia-300 to-pink-400"
+    // },
+    // {
+    //   id: 3,
+    //   title: "Viaje por el Mundo",
+    //   description: "Recorrer cada continente juntos, descubriendo culturas, probando comidas extrañas, y creando recuerdos que llenen miles de álbumes.",
+    //   color: "from-indigo-300 to-purple-400"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Familia Propia",
+    //   description: "Crear una familia donde el amor sea el lenguaje principal, donde cada niño herede tu sonrisa y mi curiosidad por la vida.",
+    //   color: "from-rose-300 to-pink-400"
+    // }
   ];
 
   useEffect(() => {

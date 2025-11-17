@@ -1,0 +1,35 @@
+<!-- ASIDE FLOTANTE - ÍCONO DE MÚSICA NEÓN -->
+<aside class="fixed top-1/2 right-6 -translate-y-1/2 z-50">
+  <style>
+    :root {
+      --neon-pink: #ff3aa0;
+    }
+
+    .neon-glow {
+      filter: drop-shadow(0 0 6px rgba(255,58,160,0.9))
+              drop-shadow(0 0 12px rgba(255,58,160,0.55));
+    }
+  </style>
+
+  <!-- Enlace a /music -->
+  <a href="/music"
+     class="w-14 h-14 flex items-center justify-center rounded-full bg-black/60 
+            border border-pink-700/40 neon-glow hover:bg-black/80 
+            transition cursor-pointer">
+
+    <!-- Ícono musical -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-8 h-8"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         style="color: var(--neon-pink);">
+      <path d="M9 17V5l12-2v12" />
+      <circle cx="7" cy="17" r="3" />
+    </svg>
+
+  </a>
+</aside>
